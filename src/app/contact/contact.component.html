@@ -1,0 +1,48 @@
+<!-- ngModel: directiva de enlace bidireccional enlaza el valor del campo de texto,nombre, email...
+  con la propiedad -->
+
+<!--ngSubmit: Captura el evento de envío de un formulario ---- Se aplica al elemento FORM-->
+
+
+
+
+<form (ngSubmit)="registrar()" #registroForm="ngForm">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="email" required>
+  </div>
+
+  <div>
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" [(ngModel)]="telefono" required>
+  </div>
+
+  <div>
+    <label>
+      <input type="checkbox" name="haVistoRickMorty" [(ngModel)]="haVistoRickMorty">
+      ¿Ha visto Rick and Morty?
+    </label>
+  </div>
+
+
+  <!-- Textarea para dejar un mensaje -->
+  <!-- ngModel: directiva de enlace bidireccional enlaza el valor del campo de texto con la propiedad mensaje-->
+  <!-- Cualquier cambio que hacemos en el campo de texto se refleja en la propiedad mensaje-->
+  <!-- Cualquier cambio en la propiedad mensaje se refleja en el campo de texto-->
+  <div>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" [(ngModel)]="mensaje"></textarea>
+  </div>
+
+<!-- Con este boton enviamos el formulario, al hacer clic se activa el evento que lleva asociado ngSubmit-->
+<!-- Disabled, hace que el boton no funcione si el registro del formulario no es valido-->
+<!-- Si el registro es valido, disabled sera false y se podrá pulsar el boton-->
+  <button type="submit" [disabled]="!registroForm.form.valid">Registrar</button>
+  <button type="button" (click)="limpiar()">Limpiar</button>
+</form>
+

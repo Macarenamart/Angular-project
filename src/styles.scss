@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* Este tipo de letra lo hemos guardado antes en assets carpeta fonts y formato ttf*/
+/*Una vez importado en los estilos generales lo podemos aplicar a cualquier parte
+de la página*/
+/*
+Formato:
+  @font-face
+    font-family:'Nombre que le ponemos a la fuente';
+    src:url ('Localizacion de la fuente')
+*/
+
+
+
+
+@font-face {
+  font-family: 'GetSchwifty';
+  src:url('./assets/Font/get_schwifty.ttf');
+}

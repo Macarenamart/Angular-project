@@ -1,0 +1,24 @@
+header {
+  background-color: #272829;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  filter: grayscale(100%);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+}
+
